@@ -180,8 +180,8 @@ h2::after {
 @media (max-width: 1024px) {
 
     .navbar {
-        padding: 0 60px;
-        height: 90px;
+        padding: 10px 60px;
+        height: 140px;
     }
 
     .nav-left,
