@@ -1,44 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzun Masa</title>
-    <meta name="description" content="Description">
-    <link rel="icon" type="img/png" href="img/uzun_masa_logo.png">
+    <title>Uzun Masa – Türkisches Restaurant in Berlin</title>
+    <meta name="description" content="Uzun Masa – authentische türkische Küche in Berlin-Kreuzberg. Speisekarte, Events und Reservierung unter +49 30 35531853. Sanderstraße 1.">
+    <meta property="og:title" content="Uzun Masa – Türkisches Restaurant in Berlin">
+    <meta property="og:description" content="Authentische türkische Küche in Berlin-Kreuzberg. Speisekarte ansehen und Tisch reservieren.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <link rel="icon" type="image/png" href="img/uzun_masa_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Uzun Masa",
+        "image": "img/um_logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sanderstraße 1",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE"
+        },
+        "telephone": "+49-30-35531853",
+        "url": "https://www.instagram.com/uzunmasaberlin/",
+        "servesCuisine": "Turkish",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "00:00"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
 
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
 <!-- HERO -->
 <header class="hero" id="home">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Hauptnavigation">
         <div class="nav-left">
             <a href="#menu">Speisekarte</a>
-            <a href="#about">Events</a>
+            <a href="#events">Events</a>
         </div>
 
-        <div class="nav-logo">
-            <img src="img/um_logo.png" alt="Logo">
-        </div>
+        <a class="nav-logo" href="#home">
+            <img src="img/um_logo.png" alt="Uzun Masa Logo">
+        </a>
 
         <div class="nav-right">
-            <a href="#events">Über uns</a>
+            <a href="#about">Über uns</a>
             <a href="#location">Kontakt</a>
         </div>
+
+        <button type="button" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
     </nav>
 
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <a href="#menu">Speisekarte</a>
+        <a href="#events">Events</a>
+        <a href="#about">Über uns</a>
+        <a href="#location">Kontakt</a>
+        <a class="mobile-nav-reserve" href="tel:+493035531853">Tisch reservieren</a>
+    </div>
+
     <div class="hero-content">
-        <button class="hero-btn">TISCH RESERVIEREN</button>
+        <a class="hero-btn" href="tel:+493035531853">Tisch reservieren</a>
     </div>
 </header>
+
+<main id="main">
 
 <!-- GRID -->
 <section class="grid-section" id="menu">
     <div class="button-wrapper">
-        <a class="pdf-btn" href="Speisekarte.pdf" target="_blank">
+        <a class="pdf-btn" href="Speisekarte.pdf" target="_blank" rel="noopener noreferrer">
             Speisekarte ansehen
         </a>
     </div>
@@ -47,25 +100,25 @@
         <div class="grid-item">
             <picture>
                 <source srcset="img/1.webp" type="image/webp">
-                <img src="img/1.jpg" loading="lazy" alt="">
+                <img src="img/1.jpg" loading="lazy" alt="Gericht im Uzun Masa Restaurant">
             </picture>
         </div>
-        <div class="grid-item mobile-hidden">
+        <div class="grid-item tablet-hidden">
             <picture>
                 <source srcset="img/2.webp" type="image/webp">
-                <img src="img/2.jpg" loading="lazy" alt="">
+                <img src="img/2.jpg" loading="lazy" alt="Ambiente im Uzun Masa Restaurant">
             </picture>
         </div>
         <div class="grid-item">
             <picture>
                 <source srcset="img/3.webp" type="image/webp">
-                <img src="img/3.jpg" loading="lazy" alt="">
+                <img src="img/3.jpg" loading="lazy" alt="Türkische Spezialitäten bei Uzun Masa">
             </picture>
         </div>
-        <div class="grid-item mobile-hidden">
+        <div class="grid-item tablet-hidden">
             <picture>
                 <source srcset="img/4.webp" type="image/webp">
-                <img src="img/4.jpg" loading="lazy" alt="">
+                <img src="img/4.jpg" loading="lazy" alt="Gäste am langen Tisch im Uzun Masa">
             </picture>
         </div>
     </div>
@@ -74,18 +127,18 @@
 <!-- CARDS -->
 <section class="cards-section">
 
-    <div class="card" id="about">
-        <img src="img/7.jpg" alt="">
+    <div class="card" id="events">
+        <img src="img/7.jpg" alt="Event-Abend im Uzun Masa Restaurant" loading="lazy">
         <div class="card-text">
             <h2>Events</h2>
-            <p>Text TBA</p>
+            <p>Feiern Sie mit uns am langen Tisch – ob Geburtstage, Firmenfeiern oder besondere Anlässe. Kontaktieren Sie uns für individuelle Event-Anfragen.</p>
         </div>
     </div>
 
-    <div class="card" id="events">
-        <img src="img/6.jpg" alt="">
+    <div class="card" id="about">
+        <img src="img/6.jpg" alt="Das Team von Uzun Masa" loading="lazy">
         <div class="card-text">
-            <h2>Über Uns</h2>
+            <h2>Über uns</h2>
             <p>In der türkischen Kultur ist der Uzun Masa (der „lange Tisch“) weit mehr als nur ein Möbelstück – er ist das lebendige Herzstück der Gemeinschaft. An diesen langen Tisch verschmelzen Generationen, um das Leben zu teilen, gemeinsam zu lachen, zu weinen und tiefe, herzliche Gespräche bis spät in die Nacht zu führen. Hier werden Fremde zu Freunden und Familien rücken enger zusammen. Je mehr Menschen sich um ihn versammeln, desto schöner und reicher wird das Leben.</p>
         </div>
     </div>
@@ -96,7 +149,7 @@
 <section class="location-section" id="location">
 
     <div class="section-head">
-        <span class="eyebrow">SO FINDET IHR UNS</span>
+        <span class="eyebrow">So finden Sie uns</span>
         <h2>Unser Standort</h2>
     </div>
 
@@ -111,19 +164,20 @@
         </div>
 
         <div class="map-link">
-            <a href="https://maps.app.goo.gl/P62anSTBthyWyQaK8" target="_blank" rel="noopener">
+            <a href="https://maps.app.goo.gl/P62anSTBthyWyQaK8" target="_blank" rel="noopener noreferrer">
                 In Google Maps öffnen
             </a>
         </div>
     </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="footer">
 
     <div class="footer-container">
 
-        <!-- ABOUT -->
         <div class="footer-box">
             <h3>Über uns</h3>
             <p>
@@ -131,40 +185,43 @@
                 frisch, modern und mit Liebe zubereitet.
             </p>
 
-            <a class="google-link" href="https://www.google.com/search?sca_esv=dec68b1769b74fc5&hl=de&sxsrf=AE3TifM4ihUwJFXpj3B42QNhfSmwukQGVg:1752434091814&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5MRuYUJN-_V4zyZwvyDgw3xnc8SB--xOCMvuAwMxtsScNJXYNjO7TPd2QxPGISQPCu5PkZhWL2ASa-3Tiw4KNVRoTHq&q=Uzun+Masa+Yorumlar&sa=X&ved=2ahUKEwjCvqPcxbqOAxVkQ_EDHTOuNHEQ0bkNegQIMxAD&biw=1920&bih=953&dpr=1" target="_blank">
+            <a class="google-link" href="https://maps.app.goo.gl/P62anSTBthyWyQaK8" target="_blank" rel="noopener noreferrer">
                 Bewerten Sie uns auf Google
             </a>
         </div>
 
-        <!-- CONTACT -->
         <div class="footer-box">
             <h3>Adresse</h3>
 
-            <p>
-                Sanderstraße 1, Berlin, Germany
+            <p class="contact-line">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Sanderstraße 1, Berlin, Deutschland
             </p>
 
-            <p>
-                +49 030 35531853
+            <p class="contact-line">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+493035531853">+49 30 35531853</a>
             </p>
 
-            <p>
-                Mo–Fr: 08:00–22:00 <br>
+            <p class="contact-line">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                Mo–Fr: 08:00–22:00
+            </p>
+
+            <p class="contact-line">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
                 Sa–So: 08:00–00:00
             </p>
         </div>
 
-        <!-- SOCIAL -->
         <div class="footer-box">
             <h3>Bleiben Sie in Kontakt</h3>
 
             <div class="social">
-                <a href="https://www.instagram.com/uzunmasaberlin/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                <a href="tel:+4903035531853"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://maps.app.goo.gl/P62anSTBthyWyQaK8" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="https://wa.me/493035531853" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                <a href="https://www.instagram.com/uzunmasaberlin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="tel:+493035531853" aria-label="Anrufen"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+                <a href="https://maps.app.goo.gl/P62anSTBthyWyQaK8" target="_blank" rel="noopener noreferrer" aria-label="Standort"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></a>
+                <a href="https://wa.me/493035531853" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
             </div>
         </div>
 
@@ -176,5 +233,6 @@
 
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
